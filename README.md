@@ -5,10 +5,10 @@ This script will attach channel-like categories to channels under them.
 Example:
 
 You have these 5 channels:
-1. ### GENERAL ###
+1. \#\#\# GENERAL \#\#\#
 2. TV1 HD
 3. TV2 HD
-4. ### MUSIC ###
+4. \#\#\# MUSIC \#\#\#
 5. METAL LIVE TV HD
 
 For example, if you provided `\#\#\# (.*) \#\#\#` regex:
