@@ -1,7 +1,7 @@
 ## M3U Category Matcher
 
-Do you have IPTV provider who doesn't add categories to channels, but uses channels for it?
-This script will attach channel-like categories to channels under them.
+Do you have IPTV provider who doesn't add groups to channels, but uses channel names for it?
+This script will attach "channel-like" categories to channels under them.
 Example:
 
 You have these 5 channels:
