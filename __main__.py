@@ -58,7 +58,7 @@ def process(arguments):
         match = regex.match(channel.name)
         if match:
             playlist.remove_channel(index)
-            current_category = channel.name
+            current_category = match.group(1)
             
             debug(f"Category matched: {current_category}")
         elif current_category:
