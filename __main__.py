@@ -54,10 +54,12 @@ def process(arguments):
     # Add category "News" to channel 5.
     
     current_category = None
+    channels_to_remove = []
+
     for index, channel in enumerate(playlist):
         match = regex.match(channel.name)
         if match:
-            playlist.remove_channel(index)
+            channels_to_remove.append(index)
             current_category = match.group(1)
             
             debug(f"Category matched: {current_category}")
@@ -65,6 +67,9 @@ def process(arguments):
             debug(f"Adding category {current_category} to channel {channel.name}")
             channel.attributes["group-title"] = current_category
     
+    for index in channels_to_remove:
+        playlist.remove_channel(index)
+        
     # save playlist
     debug("Saving playlist...")
     with open(arguments.input, "w+", encoding="utf-8") as f:
